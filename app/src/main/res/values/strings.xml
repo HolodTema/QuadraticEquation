@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">QuadraticEquation</string>
+    <string name="equation1">Уравнение:</string>
+    <string name="equation2">Уравнение 2:</string>
+    <string name="number_a">коэффицент a</string>
+    <string name="number_b">коэффицент b</string>
+    <string name="number_c">коэффицент c</string>
+    <string name="number_d">коэффицент d</string>
+    <string name="output">Вывод решения:</string>
+    <string name="do_solution">решить</string>
+</resources>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textEquation1"
+        style="@style/styleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="@string/equation1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textNumberA"
+        style="@style/styleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/number_a"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEquation1" />
+    <TextView
+        android:id="@+id/textNumberB"
+        style="@style/styleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/number_b"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEquation1" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/textNumberA"
+        app:layout_constraintStart_toStartOf="@+id/textNumberA"
+        app:layout_constraintTop_toBottomOf="@+id/textNumberA"
+        android:id="@+id/editNumberA"/>
+
+    <EditText
+        android:id="@+id/editNumberB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/textNumberB"
+        app:layout_constraintStart_toStartOf="@+id/textNumberB"
+        app:layout_constraintTop_toBottomOf="@+id/textNumberB" />
+
+
+
+
+
+    <TextView
+        android:id="@+id/textNumberC"
+        style="@style/styleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/number_c"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNumberA" />
+    <TextView
+        android:id="@+id/textNumberD"
+        style="@style/styleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/number_d"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNumberB" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/textNumberC"
+        app:layout_constraintStart_toStartOf="@+id/textNumberC"
+        app:layout_constraintTop_toBottomOf="@+id/textNumberC"
+        android:id="@+id/editNumberC"/>
+
+    <EditText
+        android:id="@+id/editNumberD"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/textNumberD"
+        app:layout_constraintStart_toStartOf="@+id/textNumberD"
+        app:layout_constraintTop_toBottomOf="@+id/textNumberD" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/do_solution"
+        app:layout_constraintBottom_toTopOf="@+id/textOutputTitle"
+        app:layout_constraintEnd_toStartOf="@+id/textNumberD"
+        app:layout_constraintStart_toEndOf="@+id/textNumberC"
+        app:layout_constraintTop_toBottomOf="@+id/textEquation1"
+        android:layout_margin="10dp"
+        android:onClick="onClickButtonDoSolution"/>
+    <TextView
+        android:id="@+id/textOutputTitle"
+        style="@style/styleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/output"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNumberD"
+        android:layout_margin="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textOutputTitle" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:id="@+id/textOutput"
+                style="@style/styleText"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
